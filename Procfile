@@ -1,1 +1,1 @@
-"web: node sportbooks_ws.js" 
+web:node sportbooks_ws.js
