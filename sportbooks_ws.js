@@ -1,4 +1,4 @@
-var SportBooks = require('./sportBooks');
+var SportBooks = require('./sportbooks');
 var express = require('express');
 var url = require('url');
 
