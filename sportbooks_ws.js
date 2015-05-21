@@ -6,7 +6,7 @@ var app =  express();
 var sportBooks = new SportBooks;
 
 app.get('/', function(req,res) {
-	res.send("sportBooks ws root");
+	res.sendFile(__dirname + '/index.html');
 });
 
 app.get('/showAllSportBooks', function(req,res) {
