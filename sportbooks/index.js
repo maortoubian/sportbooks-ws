@@ -36,7 +36,6 @@ sportBooks.prototype.getAll = function(){
 sportBooks.prototype.getByID = function(bookId){
 
 	console.log("Funcion - getByID - was called");
-	//(!Number.isInteger(bookId))
  
 	if (isNaN(bookId)){
 		console.log("-------------------------------------");
