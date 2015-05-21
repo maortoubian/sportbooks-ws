@@ -37,6 +37,13 @@ sportBooks.prototype.getByID = function(bookId){
 
 	console.log("Funcion - getByID - was called");
 
+	if (!Number.isInteger(bookId)){
+		console.log("-------------------------------------");
+		console.log("wrong value type was sent, you need to send int");
+		console.log("-------------------------------------");
+		return null;
+	}
+
 	for ( var i = 0, l = booksJSON.sportBooks.length; i < l; i++ ) {
 
 		if(booksJSON.sportBooks[i].ID==bookId){
@@ -65,7 +72,14 @@ sportBooks.prototype.getByID = function(bookId){
 sportBooks.prototype.howManybooksBetweenPrices = function(from , to){
 
 	console.log("Funcion - howManybooksBetweenPrices - was called");
-	
+
+	if (!Number.isInteger(from) || !Number.isInteger(to)){			
+		console.log("-------------------------------------");
+		console.log("wrong value type was sent, you need to send ints");
+		console.log("-------------------------------------");
+		return null;
+	}
+
 	var rb = {
 	    sportBooks: []
 	};

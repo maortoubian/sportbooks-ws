@@ -36,6 +36,16 @@ app.get('/betweenPrice', function(req,res) {
 app.listen(process.env.PORT || 3000);
 
 //example of using the module functions
+
+//return JSON with all the sportbooks
 sportBooks.getAll();
-sportBooks.getByID(444);
-sportBooks.howManybooksBetweenPrices(2,20);
+
+//return null and will print to the log that a wrong value was sent, string instead of int
+sportBooks.getByID("111");
+//return JSON with the wanted id details if existed
+sportBooks.getByID(111);
+
+//return null and will print to the log that a wrong value was sent, string instead of int
+sportBooks.howManybooksBetweenPrices("0",20);
+//return JSON with the wanted books in the price range if existed
+sportBooks.howManybooksBetweenPrices(0,20);
