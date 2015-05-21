@@ -10,6 +10,8 @@ function sportBooks(){
 //if not found will return null & print to console 
 sportBooks.prototype.getAll = function(){
 
+	console.log("Funcion - getAll - was called");
+
 	if(booksJSON.sportBooks.length==0){
 		console.log("No sport books exist");
 		return 0;
@@ -32,6 +34,8 @@ sportBooks.prototype.getAll = function(){
 //return JSON with the  specific book id that has been searched & prints to console
 //if not found will return null & print to console 
 sportBooks.prototype.getByID = function(bookId){
+
+	console.log("Funcion - getByID - was called");
 
 	for ( var i = 0, l = booksJSON.sportBooks.length; i < l; i++ ) {
 
@@ -60,6 +64,8 @@ sportBooks.prototype.getByID = function(bookId){
 //if not found will return null & print to console 
 sportBooks.prototype.howManybooksBetweenPrices = function(from , to){
 
+	console.log("Funcion - howManybooksBetweenPrices - was called");
+	
 	var rb = {
 	    sportBooks: []
 	};
