@@ -41,11 +41,11 @@ app.listen(process.env.PORT || 3000);
 sportBooks.getAll();
 
 //return null and will print to the log that a wrong value was sent, string instead of int
-sportBooks.getByID("111");
+sportBooks.getByID("one");
 //return JSON with the wanted id details if existed
 sportBooks.getByID(111);
 
 //return null and will print to the log that a wrong value was sent, string instead of int
-sportBooks.howManybooksBetweenPrices("0",20);
+sportBooks.howManybooksBetweenPrices("zero",20);
 //return JSON with the wanted books in the price range if existed
 sportBooks.howManybooksBetweenPrices(0,20);

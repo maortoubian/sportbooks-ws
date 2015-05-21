@@ -10,7 +10,7 @@ function sportBooks(){
 //if not found will return null & print to console 
 sportBooks.prototype.getAll = function(){
 
-	console.log("Funcion - getAll - was called");
+	console.log("Function - getAll - was called");
 
 	if(booksJSON.sportBooks.length==0){
 		console.log("No sport books exist");
@@ -35,7 +35,7 @@ sportBooks.prototype.getAll = function(){
 //if not found will return null & print to console 
 sportBooks.prototype.getByID = function(bookId){
 
-	console.log("Funcion - getByID - was called");
+	console.log("Function - getByID - was called");
  
 	if (isNaN(bookId)){
 		console.log("-------------------------------------");
