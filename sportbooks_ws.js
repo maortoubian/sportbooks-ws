@@ -25,6 +25,10 @@ app.get('/id', function(req,res) {
 	var urlObj = url.parse(req.url,true);
 	var query = urlObj.query;
 	var j = sportBooks.getByID(query.id);
+	res.header("Access-Control-Allow-Origin", "*");
+	res.header("Access-Control-Allow-Header", "Origin, X-Requested-With,Content-Type, Accept");
+	res.set("Content-Type", "application/json");
+	res.status(200);
 	res.json(j);
 });
 
@@ -33,6 +37,10 @@ app.get('/betweenPrice', function(req,res) {
 	var urlObj = url.parse(req.url,true);
 	var query = urlObj.query;
 	var j = sportBooks.howManybooksBetweenPrices(parseInt(query.from),parseInt(query.to));
+	res.header("Access-Control-Allow-Origin", "*");
+	res.header("Access-Control-Allow-Header", "Origin, X-Requested-With,Content-Type, Accept");
+	res.set("Content-Type", "application/json");
+	res.status(200);
 	res.json(j);
 });
 
