@@ -13,6 +13,10 @@ app.get('/', function(req,res) {
 //route showAllSportBooks called, will activate the module - getAll - function that will return a JSON with all the books
 app.get('/showAllSportBooks', function(req,res) {
 	var j = sportBooks.getAll();
+	res.header("Access-Control-Allow-Origin", "*");
+	res.header("Access-Control-Allow-Header", "Origin, X-Requested-With,Content-Type, Accept");
+	res.set("Content-Type", "application/json");
+	res.status(200);
 	res.json(j);
 });
 
