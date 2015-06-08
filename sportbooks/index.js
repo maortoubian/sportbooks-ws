@@ -36,7 +36,11 @@ sportBooks.prototype.getAll = function(){
 sportBooks.prototype.getByID = function(bookId){
 
 	console.log("Function - getByID - was called");
- 
+
+ 	var rb = {
+	    sportBooks: []
+	};
+
 	if (isNaN(bookId)){
 		console.log("-------------------------------------");
 		console.log("wrong value type was sent, you need to send int");
@@ -56,7 +60,14 @@ sportBooks.prototype.getByID = function(bookId){
 			console.log("	Price: "+ booksJSON.sportBooks[i].Price);
 			console.log("-------------------------------------");
 
-			return booksJSON.sportBooks[i];				
+			rb.sportBooks.push({ 
+				"ID"	:booksJSON.sportBooks[i].ID,
+        		"Name" 	: booksJSON.sportBooks[i].Name,
+        		"Author" : booksJSON.sportBooks[i].Author,
+        		"Price"  : booksJSON.sportBooks[i].Price
+  			});
+
+			return  rb;			
 		}
 	}
 
